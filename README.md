@@ -2,6 +2,20 @@
 
 Your personalized AI companion with memory, personality, and long-term context. Runs free locally using Ollama.
 
+---
+
+## 📱 Native Android app (new)
+
+A native, local-first Android build of Muse is under active development in [`android/`](android/), rebuilt around a **zero-trust security core** (permission broker, encrypted memory, auditable tools) so it can run entirely on your phone with an on-device model.
+
+- **Build & install (free, no local toolchain):** [`docs/BUILD-AND-INSTALL.md`](docs/BUILD-AND-INSTALL.md) — GitHub Actions builds the APK for you to download.
+- **What works today vs. what doesn't (honest):** [`docs/09-feature-status.md`](docs/09-feature-status.md)
+- **Architecture, security, model selection, roadmap:** [`docs/`](docs/)
+
+The web stack below is the original Muse and is unchanged.
+
+---
+
 ## Stack
 
 | Layer | Technology |

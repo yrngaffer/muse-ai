@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="muse_bg">#0B0B0F</color>
+    <color name="muse_surface">#15151D</color>
+    <color name="muse_purple">#8B5CF6</color>
+    <color name="muse_purple_dark">#6D28D9</color>
+    <color name="ic_launcher_background">#15151D</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>

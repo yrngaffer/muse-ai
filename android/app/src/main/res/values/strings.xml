@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Muse</string>
+    <string name="nav_chat">Chat</string>
+    <string name="nav_memory">Memory</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_security">Security</string>
+    <string name="emergency_stop">Emergency stop</string>
+    <string name="mic_active">Microphone active</string>
+</resources>

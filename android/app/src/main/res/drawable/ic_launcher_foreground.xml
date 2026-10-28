@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Stylized "M" spark for Muse, centered in the safe zone. -->
+    <path
+        android:fillColor="#8B5CF6"
+        android:pathData="M36,38 L46,38 L54,56 L62,38 L72,38 L72,72 L64,72 L64,52 L56,68 L52,68 L44,52 L44,72 L36,72 Z" />
+    <path
+        android:fillColor="#C4B5FD"
+        android:pathData="M54,26 L57,34 L65,37 L57,40 L54,48 L51,40 L43,37 L51,34 Z" />
+</vector>
