@@ -30,8 +30,11 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+      # ubuntu-latest ships a full Android SDK (ANDROID_HOME set, licenses pre-accepted);
+      # AGP finds it automatically. This is a best-effort top-up for compileSdk 35 and never
+      # fails the build (replaces the flaky android-actions/setup-android action).
+      - name: Ensure Android SDK platform 35 (best-effort)
+        run: yes | sdkmanager "platforms;android-35" "build-tools;35.0.0" "platform-tools" 2>/dev/null || true
 
       - name: Set up Gradle 8.9
         uses: gradle/actions/setup-gradle@v4
