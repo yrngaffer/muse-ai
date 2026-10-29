@@ -12,16 +12,22 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/muse';
 
-// CORS — allow local dev + deployed frontend URLs
+// CORS — allow local dev, an explicit FRONTEND_URL, and any *.vercel.app deployment.
 const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:3000',
   'http://localhost:4173',
-  'https://muse-ai.vercel.app',
-];
+  process.env.FRONTEND_URL,
+].filter(Boolean);
 app.use(cors({
-  origin: allowedOrigins,
-  credentials: true
+  origin(origin, cb) {
+    if (!origin) return cb(null, true); // same-origin, curl, server-to-server
+    let host = '';
+    try { host = new URL(origin).hostname; } catch { /* malformed origin */ }
+    const ok = allowedOrigins.includes(origin) || /\.vercel\.app$/.test(host);
+    return cb(null, ok);
+  },
+  credentials: true,
 }));
 app.use(express.json({ limit: '1mb' }));
 

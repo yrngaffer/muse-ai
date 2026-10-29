@@ -1,4 +1,7 @@
-const API_BASE = '/api';
+// In production (Vercel), set VITE_API_URL to the deployed backend (Render) origin, e.g.
+// https://muse-backend-xxxx.onrender.com. In dev it's empty, so '/api' uses the Vite proxy
+// to localhost:3001 (see vite.config.js).
+const API_BASE = `${(import.meta.env.VITE_API_URL || '').replace(/\/+$/, '')}/api`;
 
 async function request(endpoint, options = {}) {
   const url = `${API_BASE}${endpoint}`;
